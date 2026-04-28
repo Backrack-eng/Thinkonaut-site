@@ -662,12 +662,45 @@ body {
   flex-wrap: wrap;
   gap: var(--space-sm);
   margin-bottom: var(--space-sm);
+  align-items: center;
 }
 
 .hero__note {
   margin: 0;
   font-size: 0.875rem;
   color: var(--text-muted);
+}
+
+.app-store-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.app-store-badge {
+  height: 56px;
+  width: auto;
+  display: block;
+  transition: transform 0.2s ease, opacity 0.2s ease, filter 0.2s ease;
+  filter: drop-shadow(0 0 18px rgba(31, 200, 200, 0.16));
+}
+
+.app-store-link:hover .app-store-badge {
+  transform: translateY(-1px) scale(1.03);
+  opacity: 0.94;
+}
+
+.app-store-link:focus-visible {
+  outline: 2px solid rgba(31, 200, 200, 0.85);
+  outline-offset: 6px;
+  border-radius: 12px;
+}
+
+@media (max-width: 640px) {
+  .app-store-badge {
+    height: 48px;
+  }
 }
 
 /* Device mockup */
